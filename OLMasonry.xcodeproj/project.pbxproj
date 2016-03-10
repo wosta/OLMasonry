@@ -15,6 +15,7 @@
 		859965711C91449200EB6D57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8599656F1C91449200EB6D57 /* LaunchScreen.storyboard */; };
 		8599657C1C91449200EB6D57 /* OLMasonryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8599657B1C91449200EB6D57 /* OLMasonryTests.m */; };
 		859965871C91449200EB6D57 /* OLMasonryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 859965861C91449200EB6D57 /* OLMasonryUITests.m */; };
+		859965961C91451900EB6D57 /* OLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 859965951C91451900EB6D57 /* OLPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		859965821C91449200EB6D57 /* OLMasonryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OLMasonryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		859965861C91449200EB6D57 /* OLMasonryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLMasonryUITests.m; sourceTree = "<group>"; };
 		859965881C91449200EB6D57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859965941C91451900EB6D57 /* OLPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLPerson.h; sourceTree = "<group>"; };
+		859965951C91451900EB6D57 /* OLPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				859965651C91449200EB6D57 /* AppDelegate.m */,
 				859965671C91449200EB6D57 /* ViewController.h */,
 				859965681C91449200EB6D57 /* ViewController.m */,
+				859965941C91451900EB6D57 /* OLPerson.h */,
+				859965951C91451900EB6D57 /* OLPerson.m */,
 				8599656A1C91449200EB6D57 /* Main.storyboard */,
 				8599656D1C91449200EB6D57 /* Assets.xcassets */,
 				8599656F1C91449200EB6D57 /* LaunchScreen.storyboard */,
@@ -202,6 +207,7 @@
 		859965561C91449200EB6D57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OL;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = olive;
 				TargetAttributes = {
@@ -273,6 +279,7 @@
 				859965691C91449200EB6D57 /* ViewController.m in Sources */,
 				859965661C91449200EB6D57 /* AppDelegate.m in Sources */,
 				859965631C91449200EB6D57 /* main.m in Sources */,
+				859965961C91451900EB6D57 /* OLPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

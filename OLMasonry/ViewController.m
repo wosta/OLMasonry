@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "OLPerson.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self personDemo];
+}
+
+- (void)personDemo {
+    OLPerson *person = [[OLPerson alloc] init];
+    //    [person run];
+    //    [person study];
+    
+    person.runBlock().studyBlock().runBlock();
 }
 
 - (void)didReceiveMemoryWarning {
