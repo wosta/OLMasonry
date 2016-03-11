@@ -1,0 +1,6 @@
+framework module Pods_OLMasonry {
+  umbrella header "Pods-OLMasonry-umbrella.h"
+
+  export *
+  module * { export * }
+}

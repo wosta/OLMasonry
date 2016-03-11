@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 #import "OLPerson.h"
-#import "Masonry.h"
-#import "MMPlaceHolder.h"
+#import "OLOrderCommitViewController.h"
 
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
@@ -31,10 +30,59 @@
     
 //    [self view01];
     
-    [self view02];
+//    [self view02];
+    
+//    [self view03];
+    
+    [self forwardOrder];
     
 }
 
+/**
+ *  跳转到订单页
+ */
+- (void)forwardOrder {
+    OLOrderCommitViewController *order = [[OLOrderCommitViewController alloc] init];
+    OLLOG(@"forwarOrder.....");
+    [self.navigationController pushViewController:order animated:YES];
+}
+
+/**
+ *  上下两个view高度平分一致，中间间距 10px  下面的view宽度是上面的一半 上面的宽度左右间距各10px
+ */
+- (void)view03 {
+    WS(ws);
+    
+    UIView *view01 = [UIView new];
+    view01.backgroundColor = [UIColor greenColor];
+    [view01 showPlaceHolder];
+    [self.view addSubview:view01];
+    
+    UIView *view02 = [UIView new];
+    view02.backgroundColor = [UIColor grayColor];
+    [view02 showPlaceHolder];
+    [self.view addSubview:view02];
+    
+    [view01 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(ws.view.mas_top).offset(10);
+        make.left.equalTo(ws.view.mas_left).offset(10);
+        make.right.equalTo(ws.view.mas_right).offset(-10);
+        make.bottom.equalTo(view02.mas_top).offset(-10);
+        make.height.equalTo(view02);
+    }];
+    
+    [view02 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(view01.mas_bottom).offset(10);
+        make.left.mas_equalTo(ws.view.mas_centerX).offset(0);
+        make.right.equalTo(ws.view.mas_right).offset(-10);
+        make.bottom.equalTo(ws.view.mas_bottom).offset(-10);
+        make.height.equalTo(view01);
+    }];
+}
+
+/**
+ *  两个view高度都为150 宽度一样 左边view距离整个view 10px 右边view距离整个view 10px 两者相距10px
+ */
 - (void)view02 {
     WS(ws);
     
@@ -77,6 +125,9 @@
     }];
 }
 
+/**
+ *  黑色view居中 高宽各300
+ */
 - (void)view01 {
     
     WS(ws);
@@ -108,7 +159,17 @@
         //        make.right.equalTo(view01).with.offset(-20);
         
         // 等价于
-        make.top.left.bottom.right.equalTo(view01).with.insets(UIEdgeInsetsMake(20, 20, 20, 20));
+        make.top.left.bottom.and.right.equalTo(view01).with.insets(UIEdgeInsetsMake(20, 20, 20, 20));
+        // and with 并没有实际操作什么，仅仅是为了阅读性
+        /*
+         - (MASConstraint *)with {
+         return self;
+         }
+         
+         - (MASConstraint *)and {
+         return self;
+         }
+         */
         
     }];
 }

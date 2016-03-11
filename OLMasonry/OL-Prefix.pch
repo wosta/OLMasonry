@@ -1,0 +1,22 @@
+//
+//  OL-Prefix.pch
+//  OLMasonry
+//
+//  Created by 魏旺 on 16/3/11.
+//  Copyright © 2016年 olive. All rights reserved.
+//
+
+#ifndef OL_Prefix_h
+#define OL_Prefix_h
+
+//__OBJC__ 是有必要的，如果工程包含c++文件，编辑器才能正确的区分
+#ifdef __OBJC__
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "OLGlobal.h"
+#import "Masonry.h"
+#import "MMPlaceHolder.h"
+
+#endif
+
+#endif /* OL_Prefix_h */
