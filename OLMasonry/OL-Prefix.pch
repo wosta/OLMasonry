@@ -14,7 +14,24 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "OLGlobal.h"
+
+/**
+ If you want to use masonry without all those pesky 'mas_' prefixes. Add #define MAS_SHORTHAND to your prefix.pch before importing Masonry
+ >`#define MAS_SHORTHAND`
+ 
+ Get busy Masoning
+ >`#import "Masonry.h"`
+ 
+ By default, macros which support autoboxing are prefixed with mas_. Unprefixed versions are available by defining MAS_SHORTHAND_GLOBALS before importing Masonry.
+ > `#define MAS_SHORTHAND_GLOBALS`
+ */
+
+#define MAS_SHORTHAND
+
+#define MAS_SHORTHAND_GLOBALS
+
 #import "Masonry.h"
+
 #import "MMPlaceHolder.h"
 
 #endif
